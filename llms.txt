@@ -1,0 +1,20 @@
+# TotWorth
+
+> TotWorth is a channel-neutral resale valuation layer for baby gear. It tells
+> parents what their gear is worth used, when their child will outgrow each
+> item, and what to get next — new or secondhand. TotWorth does not buy or
+> sell gear; it publishes valuation only.
+
+TotWorth is pre-launch as of August 2026. This page collects a waitlist for
+early access.
+
+## Key facts
+
+- Not a marketplace: no transactions, listings, or inventory.
+- Valuation covers resale value, outgrow timing, and successor recommendations.
+- Founded by Sandra, a solo founder with a design-systems and design-org
+  leadership background.
+
+## Pages
+
+- [Homepage](https://totworth.com/): overview, positioning, waitlist signup.

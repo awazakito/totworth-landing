@@ -1,0 +1,57 @@
+# robots.txt — TotWorth
+#
+# AI CRAWLER POLICY — read before editing
+# ----------------------------------------
+# We distinguish RETRIEVAL bots (fetch a page live, in response to a user's
+# question, to answer or cite it) from TRAINING bots (crawl broadly to build
+# a model's future weights).
+#
+# We ALLOW retrieval bots. Citation eligibility is gated entirely on whether
+# these agents can reach our pages — blocking them costs us the one channel
+# where a solo, pre-launch product can plausibly win visibility. There is no
+# retrieval-vs-privacy tradeoff here: everything on this site is already
+# meant to be public.
+#
+# We DISALLOW training bots. This is a deliberate provenance/licensing
+# position, not an oversight: it keeps our own published data and copy out
+# of third-party training sets, which preserves optionality for data
+# licensing later and reads as a defensible "we control our data" stance in
+# acquisition diligence. If asked why during diligence: this line is why.
+#
+# Standard search engine crawlers (Googlebot, Bingbot, etc.) are left fully
+# allowed below — traditional search is not the thing we're gating.
+
+# --- Retrieval agents: ALLOW ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Training agents: DISALLOW ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# --- Everything else (standard search engines, unlisted bots): ALLOW ---
+User-agent: *
+Allow: /
+
+Sitemap: https://totworth.com/sitemap.xml

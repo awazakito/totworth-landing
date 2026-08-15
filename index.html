@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TotWorth — What's your baby gear actually worth?</title>
+<meta name="description" content="TotWorth tells you what your baby gear is worth used, when your child will outgrow it, and what to get next — new or secondhand. We don't buy or sell anything. We just tell you the truth about value.">
+<link rel="canonical" href="https://totworth.com/">
+<meta name="theme-color" content="#0F5C56">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TotWorth">
+<meta property="og:title" content="TotWorth — What's your baby gear actually worth?">
+<meta property="og:description" content="Channel-neutral resale value, outgrow timing, and what's next — for every piece of baby gear you own. We never buy or sell anything.">
+<meta property="og:url" content="https://totworth.com/">
+<meta property="og:image" content="https://totworth.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TotWorth — What's your baby gear actually worth?">
+<meta name="twitter:description" content="Channel-neutral resale value, outgrow timing, and what's next — for every piece of baby gear you own.">
+<meta name="twitter:image" content="https://totworth.com/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+
+<!--
+  ORGANIZATION + PERSON JSON-LD
+  ------------------------------
+  `sameAs` is intentionally left empty below rather than filled with placeholder
+  or guessed URLs. Entity resolution depends on these links being real and
+  consistent — a fabricated or wrong URL actively hurts resolution more than an
+  empty array does. Fill in real profile URLs (LinkedIn, X, Crunchbase, etc.)
+  as they're created, and keep the naming/description identical across all of
+  them — see Brief 5 notes in README.md.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://totworth.com/#organization",
+  "name": "TotWorth",
+  "url": "https://totworth.com/",
+  "description": "TotWorth is a channel-neutral resale valuation layer for baby gear. It tells parents what their gear is worth used, when their child will outgrow each item, and what to get next — new or secondhand. TotWorth does not buy or sell gear.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://totworth.com/#founder",
+  "name": "Sandra",
+  "jobTitle": "Founder",
+  "worksFor": { "@id": "https://totworth.com/#organization" },
+  "description": "Founder of TotWorth. Background in design systems and design-org leadership.",
+  "sameAs": []
+}
+</script>
+
+<style>
+  /* ---------- Reset & base ---------- */
+  :root{
+    --bg: #FAF8F4;
+    --bg-alt: #F0EDE6;
+    --ink: #1C2321;
+    --ink-soft: #43504C;
+    --teal: #0F5C56;
+    --teal-dark: #0B403C;
+    --teal-tint: #E4EFEC;
+    --amber: #B45309;
+    --amber-tint: #FDF0DD;
+    --line: #DDD6C9;
+    --white: #FFFFFF;
+    --radius: 14px;
+    --max: 1080px;
+  }
+  *,*::before,*::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{ font-family: Georgia, "Times New Roman", serif; line-height: 1.15; margin: 0 0 0.5em; color: var(--ink); }
+  p{ margin: 0 0 1em; }
+  img,svg{ max-width:100%; display:block; }
+  a{ color: var(--teal-dark); }
+  .container{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Accessibility helpers ---------- */
+  .skip-link{
+    position:absolute; left:-9999px; top:0; background: var(--teal-dark); color:#fff;
+    padding: 12px 20px; z-index: 100; border-radius: 0 0 8px 0; font-weight:600;
+  }
+  .skip-link:focus{ left:0; }
+  :focus-visible{ outline: 3px solid var(--amber); outline-offset: 2px; }
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky; top:0; z-index: 20; background: rgba(250,248,244,0.92);
+    backdrop-filter: blur(6px); border-bottom: 1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding: 16px 0; }
+  .logo{ font-family: Georgia, serif; font-weight:700; font-size: 1.3rem; color: var(--teal-dark); text-decoration:none; }
+  .nav-cta{
+    background: var(--teal-dark); color:#fff; text-decoration:none; font-weight:600;
+    padding: 10px 18px; border-radius: 999px; font-size: 0.95rem;
+  }
+  .nav-cta:hover{ background: var(--teal); }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding: 72px 0 56px; }
+  .eyebrow{
+    display:inline-block; font-size: 0.8rem; font-weight:700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--teal-dark); background: var(--teal-tint); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  h1{ font-size: clamp(2rem, 5vw, 3.1rem); max-width: 18ch; }
+  .hero-sub{ font-size: 1.2rem; color: var(--ink-soft); max-width: 52ch; margin-bottom: 32px; }
+  .hero-sub strong{ color: var(--ink); }
+
+  /* ---------- Forms ---------- */
+  .waitlist-form{
+    display:flex; gap:10px; flex-wrap:wrap; max-width: 480px; margin-bottom: 12px;
+  }
+  .waitlist-form input[type="email"]{
+    flex: 1 1 240px; padding: 14px 16px; font-size: 1rem; border: 2px solid var(--line);
+    border-radius: 10px; background: var(--white); color: var(--ink);
+  }
+  .waitlist-form input[type="email"]:focus{ border-color: var(--teal); }
+  .waitlist-form button{
+    background: var(--teal-dark); color:#fff; border:none; font-weight:700; font-size:1rem;
+    padding: 14px 24px; border-radius: 10px; cursor:pointer; white-space:nowrap;
+  }
+  .waitlist-form button:hover{ background: var(--teal); }
+  .waitlist-form button:disabled{ opacity:0.6; cursor:not-allowed; }
+  .form-note{ font-size: 0.85rem; color: var(--ink-soft); }
+  .form-status{ font-size: 0.95rem; margin-top: 10px; min-height: 1.4em; }
+  .form-status[data-state="success"]{ color: var(--teal-dark); font-weight:600; }
+  .form-status[data-state="error"]{ color: #9A3412; font-weight:600; }
+
+  /* ---------- Sections ---------- */
+  section{ padding: 56px 0; }
+  .section-label{
+    font-size: 0.8rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+    color: var(--teal-dark); margin-bottom: 10px;
+  }
+  h2{ font-size: clamp(1.6rem, 3.4vw, 2.2rem); max-width: 24ch; }
+  .section-intro{ color: var(--ink-soft); max-width: 60ch; font-size: 1.05rem; margin-bottom: 40px; }
+
+  /* Three problems */
+  .steps{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .step-card{
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px; position:relative;
+  }
+  .step-num{
+    display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px;
+    border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); font-weight:700;
+    margin-bottom: 16px; font-size: 0.95rem;
+  }
+  .step-card h3{ font-size: 1.25rem; margin-bottom: 10px; }
+  .step-card p{ color: var(--ink-soft); font-size: 0.98rem; margin:0; }
+
+  /* Channel-neutral statement */
+  .neutral-band{ background: var(--teal-dark); color: #fff; border-radius: var(--radius); padding: 44px 40px; margin: 8px 0; }
+  .neutral-band h2{ color:#fff; }
+  .neutral-band p{ color: #D9E9E6; font-size: 1.05rem; max-width: 60ch; margin-bottom: 0; }
+  .neutral-band .callout{ font-family: Georgia, serif; font-size: 1.4rem; color:#fff; max-width: 26ch; margin-bottom: 16px; }
+
+  /* Product visual mockup */
+  .mock-wrap{ display:flex; justify-content:center; }
+  .mock-card{
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    max-width: 420px; width:100%; padding: 28px; box-shadow: 0 12px 32px rgba(15,92,86,0.08);
+  }
+  .mock-badge{
+    display:inline-block; font-size: 0.72rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
+    background: var(--bg-alt); color: var(--ink-soft); padding: 4px 10px; border-radius: 6px; margin-bottom: 16px;
+  }
+  .mock-item{ font-weight:700; font-size:1.1rem; margin-bottom: 4px; }
+  .mock-sub{ color: var(--ink-soft); font-size:0.9rem; margin-bottom: 20px; }
+  .mock-value-row{ display:flex; justify-content:space-between; align-items:baseline; padding: 14px 0; border-top: 1px solid var(--line); }
+  .mock-value-row:first-of-type{ border-top:none; }
+  .mock-label{ color: var(--ink-soft); font-size: 0.92rem; }
+  .mock-value{ font-family: Georgia, serif; font-size: 1.5rem; font-weight:700; color: var(--teal-dark); }
+  .mock-value.future{ color: var(--ink-soft); font-size:1.2rem; }
+  .mock-signal{
+    margin-top: 18px; display:flex; align-items:center; gap:10px; background: var(--amber-tint);
+    border-radius: 8px; padding: 12px 14px;
+  }
+  .mock-signal .dot{ width:10px; height:10px; border-radius:50%; background: var(--amber); flex:none; }
+  .mock-signal-text{ font-size: 0.92rem; color: #7C2D12; font-weight:600; }
+  .mock-method{ font-size: 0.78rem; color: var(--ink-soft); margin-top: 16px; }
+
+  /* Founder note */
+  .founder{ display:flex; gap: 28px; align-items:flex-start; max-width: 720px; }
+  .founder-avatar{
+    flex:none; width:64px; height:64px; border-radius:50%; background: var(--teal-tint); color: var(--teal-dark);
+    display:flex; align-items:center; justify-content:center; font-family: Georgia, serif; font-weight:700; font-size:1.3rem;
+  }
+  .founder blockquote{ margin:0 0 12px; font-size: 1.08rem; color: var(--ink); }
+  .founder cite{ font-style:normal; font-size:0.92rem; color: var(--ink-soft); }
+
+  /* Final CTA */
+  .final-cta{ background: var(--teal-tint); border-radius: var(--radius); padding: 48px 40px; text-align:center; }
+  .final-cta h2{ margin: 0 auto 14px; }
+  .final-cta .waitlist-form{ margin: 0 auto 12px; justify-content:center; }
+  .final-cta .form-note{ display:block; }
+
+  footer{ border-top: 1px solid var(--line); padding: 32px 0; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size: 0.88rem; color: var(--ink-soft); }
+  .footer-row a{ color: var(--ink-soft); margin-left: 16px; }
+
+  @media (max-width: 640px){
+    .neutral-band, .final-cta{ padding: 32px 22px; }
+    .founder{ flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">TotWorth</a>
+    <a class="nav-cta" href="#waitlist-top">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Baby gear, honestly valued</span>
+      <h1>What's your baby gear actually worth?</h1>
+      <p class="hero-sub">
+        A car seat, a bassinet, a stroller — the value drops every month you keep it.
+        <strong>TotWorth tells you what each item is worth right now, when your child will outgrow it, and what to get next</strong> —
+        without trying to buy it, sell it, or list it for you.
+      </p>
+
+      <form class="waitlist-form" id="waitlist-top" data-waitlist-form novalidate>
+        <label class="visually-hidden" for="email-top">Email address</label>
+        <input id="email-top" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
+        <button type="submit">Join the waitlist</button>
+      </form>
+      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+      <p class="form-note">One email when we launch. No spam, no lists sold, unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- ============ THREE PROBLEMS ============ -->
+  <section aria-labelledby="problems-heading">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2 id="problems-heading">Three questions every parent has about their gear, answered in order</h2>
+      <p class="section-intro">
+        We start with what it's worth today, because that's the question with no good answer anywhere else right now.
+      </p>
+
+      <div class="steps">
+        <article class="step-card">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>What's it worth?</h3>
+          <p>
+            A real resale estimate for the exact item you own — model, condition, and how long you've had it —
+            pulled from actual sold listings, not a guess.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>When will they outgrow it?</h3>
+          <p>
+            The projected date your child ages out of it, sized to their own growth — because the countdown is
+            exactly why the value question is timely, not academic.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>What's next?</h3>
+          <p>
+            A neutral recommendation for what comes after — new or secondhand — with no incentive to push you
+            toward either one.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHANNEL NEUTRAL ============ -->
+  <section aria-labelledby="neutral-heading">
+    <div class="container">
+      <div class="neutral-band">
+        <p class="callout">We don't buy your gear. We don't sell it. We just tell you what it's worth.</p>
+        <h2 id="neutral-heading" class="visually-hidden">TotWorth is channel-neutral</h2>
+        <p>
+          Resale marketplaces price your gear to buy it from you at a margin. We don't have inventory, so we
+          don't have a reason to push the number in either direction — the valuation is the product, not a step
+          toward a transaction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT VISUAL ============ -->
+  <section aria-labelledby="visual-heading">
+    <div class="container">
+      <p class="section-label">What you'll see</p>
+      <h2 id="visual-heading">A valuation, not just a timeline</h2>
+      <p class="section-intro">
+        Every item in your gear shelf gets a card like this — a current estimate, where it's headed, and a
+        straight signal on whether to sell now or hold.
+      </p>
+
+      <div class="mock-wrap">
+        <div class="mock-card">
+          <span class="mock-badge">Example — illustrative only</span>
+          <p class="mock-item">UPPAbaby Vista V2</p>
+          <p class="mock-sub">Bassinet stage &middot; purchased 14 months ago &middot; good condition</p>
+
+          <div class="mock-value-row">
+            <span class="mock-label">Estimated resale value today</span>
+            <span class="mock-value">$340</span>
+          </div>
+          <div class="mock-value-row">
+            <span class="mock-label">Projected by December</span>
+            <span class="mock-value future">$260</span>
+          </div>
+
+          <div class="mock-signal">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="mock-signal-text">Sell soon — value drops fastest in the next 90 days</span>
+          </div>
+
+          <p class="mock-method">
+            Sample card for illustration. Live estimates will show method and sample size, e.g.
+            "based on 1,240 verified sold listings, Jan–Jul 2026."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDER NOTE ============ -->
+  <section aria-labelledby="founder-heading">
+    <div class="container">
+      <p class="section-label">Why I'm building this</p>
+      <h2 id="founder-heading" class="visually-hidden">A note from the founder</h2>
+      <div class="founder">
+        <div class="founder-avatar" aria-hidden="true">S</div>
+        <div>
+          <blockquote>
+            <p>
+              I spent my career building design systems and leading design teams — helping companies figure out
+              what "good" looks like and building the structure to deliver it consistently. When I went looking
+              for a straight answer on what our own baby gear was worth, I couldn't find one: every resale site
+              I checked was trying to buy it from me first. TotWorth is the tool I wanted — one that answers the
+              question honestly, with nothing to sell.
+            </p>
+          </blockquote>
+          <cite>— Sandra, founder</cite>
+          <p style="margin-top:18px;">
+            <span class="mock-badge" style="margin-bottom:0;">Coming soon</span><br>
+            <span style="color:var(--ink-soft); font-size:0.92rem;">
+              Real parent feedback on every estimate — was it accurate, what did it actually sell for,
+              is this one worth buying new or used. Rolling out after launch, once there's enough of it to be useful.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section aria-labelledby="final-cta-heading">
+    <div class="container">
+      <div class="final-cta">
+        <h2 id="final-cta-heading">Get an email the day we launch</h2>
+        <p class="section-intro" style="margin-left:auto;margin-right:auto;">
+          Early access goes to the waitlist first.
+        </p>
+        <form class="waitlist-form" data-waitlist-form novalidate>
+          <label class="visually-hidden" for="email-bottom">Email address</label>
+          <input id="email-bottom" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
+          <button type="submit">Join the waitlist</button>
+        </form>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="form-note">One email when we launch. No spam, no lists sold, unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>&copy; 2026 TotWorth. Not affiliated with any gear manufacturer or marketplace.</span>
+    <nav aria-label="Footer">
+      <a href="mailto:hello@totworth.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Progressive enhancement only. All page content above renders with zero JS —
+  // this script only makes the waitlist form submit without a full page reload.
+  // If JS is disabled or fails, the form still POSTs natively to /api/subscribe.
+  (function () {
+    var forms = document.querySelectorAll('[data-waitlist-form]');
+    forms.forEach(function (form) {
+      form.setAttribute('action', '/api/subscribe');
+      form.setAttribute('method', 'POST');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var statusEl = form.querySelector('[data-form-status]');
+        var button = form.querySelector('button');
+        var email = form.querySelector('input[type="email"]').value;
+
+        button.disabled = true;
+        statusEl.textContent = 'Joining…';
+        statusEl.removeAttribute('data-state');
+
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error('request-failed');
+            return res.json().catch(function () { return {}; });
+          })
+          .then(function () {
+            statusEl.textContent = "You're on the list — we'll email you at launch.";
+            statusEl.setAttribute('data-state', 'success');
+            form.reset();
+          })
+          .catch(function () {
+            statusEl.textContent = "That didn't go through. Try again, or email hello@totworth.com directly.";
+            statusEl.setAttribute('data-state', 'error');
+          })
+          .finally(function () {
+            button.disabled = false;
+          });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
