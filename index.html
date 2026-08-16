@@ -428,7 +428,7 @@
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        var statusEl = form.querySelector('[data-form-status]');
+        var statusEl = form.parentElement.querySelector('[data-form-status]');
         var button = form.querySelector('button');
         var email = form.querySelector('input[type="email"]').value;
 
